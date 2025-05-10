@@ -1,0 +1,35 @@
+.aboutCon{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+    height: fit-content;
+    margin: 5vh auto;
+    font-family: $mainFont;
+    @include respond(small) {
+        width: 100%;
+        padding: 0 1rem;
+    }
+    // @include respond(medium) {
+    //     width: 40%;
+    //     margin: 1vh;
+    // }
+    &__info{
+        width: 63%;
+        @include respond(small) {
+            width: 100%;
+            padding: 0 1rem;
+        }
+        @include respond(medium) {
+            width: 40%;
+            margin: 1vh;
+        }
+    }
+    &__img{
+        overflow: hidden;
+        box-shadow: rgba(0, 0, 0, 0.12) 1px 0px 18px 8px;
+        img{
+            object-fit: cover;
+        }
+    }
+}

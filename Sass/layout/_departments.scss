@@ -1,0 +1,33 @@
+.department {
+    background-color: $bgColor;
+    border-top: .1vh solid $mainColor;
+    padding: 6vh 0;
+    font-family: $mainFont;
+    &__row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding-bottom: 2vh;
+        gap: 3vh 2vh;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+    }
+    h2 {
+        margin: 2vh 24vh;
+        color: $mainTextColor;
+        font-size: 3.5vh;
+        font-weight: bolder;
+    }
+    span {
+        color: $subTextColor;
+        font-size: 2.7vh;
+        margin: 2vh 24vh;
+    }
+
+    @include respond(xlarge) {
+        h1,
+        span {
+            margin: 2vh 8vh;
+        }
+    }
+}

@@ -1,0 +1,29 @@
+.insurance {
+    height: fit-content;
+    margin: 2vh auto;
+    font-family: $mainFont;
+    h2 {
+        color: $mainTextColor;
+        font-size: 3.5vh;
+        font-weight: bolder;
+        margin: 2vh 26vh;
+    }
+    span {
+        color: $subTextColor;
+        font-size: 2.6vh;
+        margin: 2vh 26vh;
+    }
+    &__container {
+        width: 90%;
+        box-sizing: border-box;
+        display: flex;
+        flex-wrap: wrap;
+        margin: 5vh auto;
+        justify-content: center;
+        align-items: center;
+        @include respond(small) {
+            width: 100%;
+            padding: 0 1rem;
+        }
+    }
+}

@@ -1,0 +1,33 @@
+.card--icon {
+    display: flex;
+    padding: 1rem;
+    &__text {
+        margin-left: 2rem;
+        &__header {
+            font-size: 3vh;
+            color: $primaryColor;
+            margin-top: 0.5rem;
+            font-weight: 700;
+        }
+        &__para {
+            font-size: 2.3vh;
+            max-width: 15rem;
+            margin-top: 1rem;
+            color: $grayLight;
+        }
+    }
+    @include respond(medium) {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+        width: 48%;
+        text-align: left;
+        padding: 2rem;
+    }
+    @include respond(small) {
+        flex-direction: column;
+        width: 100%;
+        padding: 1rem;
+    }
+}

@@ -1,0 +1,29 @@
+.hero {
+    background-image: url('../assest/medical-slide-1.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+    position: relative;
+    color: $text-light;
+    display: flex;
+    align-items: center;
+    font-family: $mainFont;
+    filter: brightness( 65% );
+    .hero-content {
+        margin-left: 35vh;
+        max-width: 500px;
+        h1 {
+            font-size: 2rem;
+            font-weight: bold;
+        }
+        h3 {
+            margin-top: 0.5rem;
+            font-size: 1rem;
+            font-weight: 600;
+        }
+        p {
+            margin-top: 0.5rem;
+            font-size: 1rem;
+        }
+    }
+}

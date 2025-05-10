@@ -1,0 +1,28 @@
+.insurance__card {
+    width: 14%;
+    height: 20vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    img {
+        padding: 3vh;
+        border: .1vh solid rgba(171, 171, 171, 0.455);
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        background-position: center;
+    }
+    @include respond(large) {
+        width: 32%;
+        margin: 1vh;
+    }
+    @include respond(medium) {
+        width: 40%;
+        margin: 1vh;
+    }
+    @include respond(small) {
+        width: 90%;
+        margin: 1vh auto;
+    }
+}

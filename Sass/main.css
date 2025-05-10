@@ -1,0 +1,597 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: Georgia, Poppins;
+}
+
+.logo img {
+  height: 40px;
+}
+
+.nav-menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.nav-menu a {
+  text-decoration: none;
+  color: #2c4f93;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+.nav-menu a.active, .nav-menu a:hover {
+  background: #2c4f93;
+  color: #fff;
+}
+
+.doctors__card {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 20%;
+  height: -moz-min-content;
+  height: min-content;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+.doctors__card:hover {
+  background-color: #008FE2;
+}
+.doctors__card:hover span,
+.doctors__card:hover h3 {
+  color: aliceblue;
+}
+.doctors__card__img {
+  width: 100%;
+  height: 50vh;
+  overflow: hidden;
+}
+.doctors__card__img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.doctors__card__info {
+  display: flex;
+  flex-wrap: wrap;
+}
+.doctors__card__info span {
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 2vh 4vh;
+  color: #797878;
+  font-weight: normal;
+}
+.doctors__card__info h3 {
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 20px;
+  color: rgb(53, 53, 53);
+  font-weight: 600;
+  margin: 0 3vh;
+  padding-bottom: 2.4vh;
+}
+.doctors__card__info__iconCircle {
+  width: -moz-max-content;
+  width: max-content;
+  height: -moz-max-content;
+  height: max-content;
+  padding: 0.5vh;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border: 0.4vh solid;
+  border-radius: 50%;
+  position: relative;
+  left: -1vh;
+  bottom: 4vh;
+  transition: all 0.2s ease-in-out;
+}
+.doctors__card__info__iconCircle:hover {
+  background-color: #008FE2;
+  color: aliceblue;
+}
+@media (max-width: 1200px) {
+  .doctors__card {
+    width: 30%;
+  }
+}
+@media (max-width: 992px) {
+  .doctors__card {
+    width: 45%;
+  }
+}
+@media (max-width: 768px) {
+  .doctors__card {
+    width: 90%;
+  }
+}
+@media (max-width: 480px) {
+  .doctors__card {
+    width: 100%;
+  }
+}
+
+.card--icon {
+  display: flex;
+  padding: 1rem;
+}
+.card--icon__text {
+  margin-left: 2rem;
+}
+.card--icon__text__header {
+  font-size: 3vh;
+  color: #008fe2;
+  margin-top: 0.5rem;
+  font-weight: 700;
+}
+.card--icon__text__para {
+  font-size: 2.3vh;
+  max-width: 15rem;
+  margin-top: 1rem;
+  color: #777777;
+}
+@media (max-width: 768px) {
+  .card--icon {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    width: 48%;
+    text-align: left;
+    padding: 2rem;
+  }
+}
+@media (max-width: 480px) {
+  .card--icon {
+    flex-direction: column;
+    width: 100%;
+    padding: 1rem;
+  }
+}
+
+.department__card {
+  width: 22%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem 2.2rem;
+}
+.department__card:hover {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 0px 9px 2px;
+}
+.department__card img {
+  width: 100%;
+  margin: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.department__card a {
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 3vh;
+  color: rgb(53, 53, 53);
+  margin: 0 3vh;
+  padding-bottom: 2.4vh;
+  text-decoration: none;
+}
+.department__card p {
+  margin: 2vh 4vh;
+  color: #797878;
+  font-weight: normal;
+}
+@media (max-width: 768px) {
+  .department__card {
+    width: 30%;
+  }
+}
+@media (max-width: 480px) {
+  .department__card {
+    width: 90%;
+  }
+}
+
+.btn {
+  width: 9rem;
+  padding: 0.8rem;
+  text-align: center;
+  vertical-align: middle;
+  border: 0.3vh solid black;
+  margin: 1.3vh auto;
+  cursor: pointer;
+}
+.btn:hover {
+  background-color: black;
+}
+.btn:hover a {
+  color: #e5e5e5;
+}
+.btn a {
+  color: black;
+  text-decoration: none;
+}
+@media (max-width: 992px) {
+  .btn {
+    width: 100%;
+    max-width: 200px;
+  }
+}
+@media (max-width: 480px) {
+  .btn {
+    padding: 0.6rem;
+    font-size: 0.9rem;
+  }
+}
+
+.btn--about {
+  margin: 5vh 7.5rem;
+}
+
+.aboutCon {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin: 5vh auto;
+  font-family: Georgia, Poppins;
+}
+@media (max-width: 480px) {
+  .aboutCon {
+    width: 100%;
+    padding: 0 1rem;
+  }
+}
+.aboutCon__info {
+  width: 63%;
+}
+@media (max-width: 480px) {
+  .aboutCon__info {
+    width: 100%;
+    padding: 0 1rem;
+  }
+}
+@media (max-width: 768px) {
+  .aboutCon__info {
+    width: 40%;
+    margin: 1vh;
+  }
+}
+.aboutCon__img {
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.12) 1px 0px 18px 8px;
+}
+.aboutCon__img img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.insurance__card {
+  width: 14%;
+  height: 20vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.insurance__card img {
+  padding: 3vh;
+  border: 0.1vh solid rgba(171, 171, 171, 0.455);
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  background-position: center;
+}
+@media (max-width: 992px) {
+  .insurance__card {
+    width: 32%;
+    margin: 1vh;
+  }
+}
+@media (max-width: 768px) {
+  .insurance__card {
+    width: 40%;
+    margin: 1vh;
+  }
+}
+@media (max-width: 480px) {
+  .insurance__card {
+    width: 90%;
+    margin: 1vh auto;
+  }
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  padding: 1rem 2rem;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  font-family: Georgia, Poppins;
+}
+
+.hero {
+  background-image: url("../assest/medical-slide-1.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 500px;
+  position: relative;
+  color: #e0e0e0;
+  display: flex;
+  align-items: center;
+  font-family: Georgia, Poppins;
+  filter: brightness(65%);
+}
+.hero .hero-content {
+  margin-left: 35vh;
+  max-width: 500px;
+}
+.hero .hero-content h1 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+.hero .hero-content h3 {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+}
+.hero .hero-content p {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+}
+
+.doctors__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 75%;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin: 5vh auto;
+  font-family: Georgia, Poppins;
+  gap: 2vh;
+}
+
+.doctors {
+  height: -moz-fit-content;
+  height: fit-content;
+  margin: 2vh;
+  padding-left: 2vh;
+}
+.doctors h2 {
+  color: rgb(53, 53, 53);
+  font-size: 3.5vh;
+  font-weight: bolder;
+  margin: 2vh 20vh;
+}
+.doctors p {
+  color: #797878;
+  font-size: 2.6vh;
+  margin: 2vh 20vh;
+}
+
+.department {
+  background-color: #e6e6e6;
+  border-top: 0.1vh solid rgba(109, 109, 109, 0.253);
+  padding: 6vh 0;
+  font-family: Georgia, Poppins;
+}
+.department__row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-bottom: 2vh;
+  gap: 3vh 2vh;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+.department h2 {
+  margin: 2vh 24vh;
+  color: rgb(53, 53, 53);
+  font-size: 3.5vh;
+  font-weight: bolder;
+}
+.department span {
+  color: #797878;
+  font-size: 2.7vh;
+  margin: 2vh 24vh;
+}
+@media (max-width: 1200px) {
+  .department h1,
+  .department span {
+    margin: 2vh 8vh;
+  }
+}
+
+.insurance {
+  height: -moz-fit-content;
+  height: fit-content;
+  margin: 2vh auto;
+  font-family: Georgia, Poppins;
+}
+.insurance h2 {
+  color: rgb(53, 53, 53);
+  font-size: 3.5vh;
+  font-weight: bolder;
+  margin: 2vh 26vh;
+}
+.insurance span {
+  color: #797878;
+  font-size: 2.6vh;
+  margin: 2vh 26vh;
+}
+.insurance__container {
+  width: 90%;
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 5vh auto;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 480px) {
+  .insurance__container {
+    width: 100%;
+    padding: 0 1rem;
+  }
+}
+
+.quote {
+  background-color: #2c4f93;
+  color: #e0e0e0;
+  padding: 4rem 1rem;
+  text-align: center;
+  font-family: Georgia, Poppins;
+}
+.quote .quote-container {
+  max-width: 800px;
+  margin: auto;
+}
+.quote .quote-container .quote-icon {
+  font-size: 3rem;
+  text-align: start;
+}
+.quote .quote-container .quote-icon.end {
+  text-align: end;
+}
+.quote .quote-container .quote-icon__start {
+  width: 8vh;
+  height: 8vh;
+  margin: 2vh auto;
+  border-radius: 50%;
+  border: 2px solid #d3d3d3;
+  padding-top: 0.5rem;
+  font-size: 2.5rem;
+}
+.quote .quote-container p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+.quote .quote-container .author-line {
+  width: 50px;
+  height: 2px;
+  background: #fff;
+  margin: 1rem auto;
+}
+.quote .quote-container .author {
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.footer {
+  font-family: Georgia, Poppins;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: #2a2a2a;
+  color: #e0e0e0;
+  padding: 3rem 1rem;
+}
+.footer .footer-container {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 4rem;
+}
+.footer .footer-container .footer-box {
+  flex: 1 1 200px;
+}
+.footer .footer-container .footer-box h3 {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+.footer .footer-container .footer-box p {
+  margin: 0.4rem 0;
+}
+.footer .footer-container .footer-box p span {
+  color: #aaa;
+}
+.footer .footer-container .footer-box .emergency-number {
+  font-size: 1.8rem;
+  color: #888;
+}
+.footer .footer-container .footer-box .social-icons {
+  display: flex;
+  margin-top: 0.5rem;
+}
+.footer .footer-container .footer-box .social-icons button {
+  padding: 1.4vh;
+  background: #fff;
+  color: #000;
+  border: none;
+  margin-right: 0.5rem;
+  cursor: pointer;
+}
+.footer .footer-container .footer-box .social-icons button:hover {
+  background-color: rgb(68, 0, 255);
+  transition: all 0.3s ease-in-out;
+  color: #fff;
+}/*# sourceMappingURL=main.css.map */

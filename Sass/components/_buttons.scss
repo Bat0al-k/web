@@ -1,0 +1,36 @@
+.btn {
+    width: 9rem;
+    padding: .8rem;
+    text-align: center;
+    vertical-align: middle;
+    border: .3vh solid $grayDark;
+    margin: 1.3vh auto;
+    cursor: pointer;
+
+    &:hover {
+        background-color: $grayDark;
+
+        a {
+            color: $aLinkHover;
+        }
+    }
+
+    & a {
+        color: $grayDark;
+        text-decoration: none;
+    }
+
+    @include respond(large) {
+        width: 100%;
+        max-width: 200px;
+    }
+
+    @include respond(small) {
+        padding: 0.6rem;
+        font-size: 0.9rem;
+    }
+}
+
+.btn--about {
+    margin: 5vh 7.5rem;
+}

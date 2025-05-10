@@ -1,0 +1,21 @@
+.logo img {
+    height: 40px;
+}
+.nav-menu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    a {
+        text-decoration: none;
+        color: $primary-blue;
+        font-weight: bold;
+        padding: 0.5rem 1rem;
+        border-radius: 5px;
+        transition: background 0.3s;
+        &.active,
+        &:hover {
+            background: $primary-blue;
+            color: #fff;
+        }
+    }
+}

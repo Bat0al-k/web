@@ -1,0 +1,42 @@
+.quote {
+    background-color: $primary-blue;
+    color: $text-light;
+    padding: 4rem 1rem;
+    text-align: center;
+    font-family: $mainFont;
+    .quote-container {
+        max-width: 800px;
+        margin: auto;
+        .quote-icon {
+            font-size: 3rem;
+            text-align: start;
+            &.end {
+                text-align: end;
+            }
+            &__start {
+                width: 8vh;
+                height: 8vh;
+                margin: 2vh auto;
+                border-radius: 50%;
+                border: 2px solid #d3d3d3;
+                padding-top: .5rem;
+                font-size: 2.5rem;
+            }
+        }
+        p {
+            font-size: 1.1rem;
+            line-height: 1.7;
+        }
+        .author-line {
+            width: 50px;
+            height: 2px;
+            background: #fff;
+            margin: 1rem auto;
+        }
+        .author {
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+    }
+}

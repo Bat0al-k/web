@@ -1,0 +1,35 @@
+.department__card{
+    width: 22%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem 2.2rem;
+    &:hover{
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 0px 9px 2px;
+    }
+    img{
+        width: 100%;
+        margin: auto;
+        object-fit: cover;
+    }
+    a {
+        width: fit-content;
+        font-size: 3vh;
+        color: rgb(53, 53, 53);
+        margin: 0 3vh;
+        padding-bottom: 2.4vh;
+        text-decoration: none;
+    }
+    p{
+        margin: 2vh 4vh;
+        color: #797878;
+        font-weight: normal;
+    }
+    @include respond(medium){
+        width: 30%;
+    }
+    @include respond(small){
+        width: 90%;
+    }
+}
