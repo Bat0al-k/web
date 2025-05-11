@@ -61,6 +61,20 @@ table {
   height: 40px;
 }
 
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: #2c4f93;
+  cursor: pointer;
+}
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+}
+
 .nav-menu {
   display: flex;
   flex-wrap: wrap;
@@ -78,6 +92,38 @@ table {
   background: #2c4f93;
   color: #fff;
 }
+@media (max-width: 768px) {
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: #fff;
+    padding: 1rem;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  .nav-menu.active {
+    display: flex;
+  }
+}
+@media (max-width: 480px) {
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: #fff;
+    padding: 1rem;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  .nav-menu.active {
+    display: flex;
+  }
+}
 
 .doctors__card {
   display: flex;
@@ -88,6 +134,7 @@ table {
   height: min-content;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
+  font-family: Georgia, Poppins;
 }
 .doctors__card:hover {
   background-color: #008FE2;
@@ -159,7 +206,7 @@ table {
 }
 @media (max-width: 768px) {
   .doctors__card {
-    width: 90%;
+    width: 46%;
   }
 }
 @media (max-width: 480px) {
@@ -281,47 +328,7 @@ table {
 }
 
 .btn--about {
-  margin: 5vh 7.5rem;
-}
-
-.aboutCon {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  width: 100%;
-  height: -moz-fit-content;
-  height: fit-content;
-  margin: 5vh auto;
-  font-family: Georgia, Poppins;
-}
-@media (max-width: 480px) {
-  .aboutCon {
-    width: 100%;
-    padding: 0 1rem;
-  }
-}
-.aboutCon__info {
-  width: 63%;
-}
-@media (max-width: 480px) {
-  .aboutCon__info {
-    width: 100%;
-    padding: 0 1rem;
-  }
-}
-@media (max-width: 768px) {
-  .aboutCon__info {
-    width: 40%;
-    margin: 1vh;
-  }
-}
-.aboutCon__img {
-  overflow: hidden;
-  box-shadow: rgba(0, 0, 0, 0.12) 1px 0px 18px 8px;
-}
-.aboutCon__img img {
-  -o-object-fit: cover;
-     object-fit: cover;
+  margin: 5vh 8.5rem;
 }
 
 .insurance__card {
@@ -402,6 +409,42 @@ table {
   margin-top: 0.5rem;
   font-size: 1rem;
 }
+@media (max-width: 768px) {
+  .hero {
+    height: auto;
+    padding: 5rem 3rem;
+  }
+  .hero .hero-content {
+    margin-left: 5vh;
+    text-align: center;
+    max-width: 100%;
+  }
+  .hero .hero-content h1 {
+    font-size: 1.7rem;
+  }
+  .hero .hero-content h3,
+  .hero .hero-content p {
+    font-size: 0.9rem;
+  }
+}
+@media (max-width: 480px) {
+  .hero {
+    height: auto;
+    padding: 2rem 1rem;
+  }
+  .hero .hero-content {
+    margin-left: 0;
+    text-align: center;
+    max-width: 100%;
+  }
+  .hero .hero-content h1 {
+    font-size: 1.5rem;
+  }
+  .hero .hero-content h3,
+  .hero .hero-content p {
+    font-size: 0.85rem;
+  }
+}
 
 .doctors__container {
   display: flex;
@@ -412,7 +455,6 @@ table {
   height: -moz-fit-content;
   height: fit-content;
   margin: 5vh auto;
-  font-family: Georgia, Poppins;
   gap: 2vh;
 }
 
@@ -421,6 +463,7 @@ table {
   height: fit-content;
   margin: 2vh;
   padding-left: 2vh;
+  font-family: Georgia, Poppins;
 }
 .doctors h2 {
   color: rgb(53, 53, 53);
@@ -432,6 +475,47 @@ table {
   color: #797878;
   font-size: 2.6vh;
   margin: 2vh 20vh;
+}
+
+.aboutCon {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin: 5vh auto;
+  font-family: Georgia, Poppins;
+}
+.aboutCon__info {
+  width: 65%;
+}
+.aboutCon__img {
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.322) 1px 0px 18px 8px;
+}
+.aboutCon__img img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media (max-width: 768px) {
+  .aboutCon {
+    flex-direction: column;
+  }
+  .aboutCon__info {
+    width: 100%;
+  }
+}
+@media (max-width: 480px) {
+  .aboutCon {
+    flex-direction: column;
+  }
+  .aboutCon__info {
+    width: 100%;
+  }
+  .aboutCon__info p {
+    margin: 2vh;
+  }
 }
 
 .department {
