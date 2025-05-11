@@ -29,7 +29,7 @@
     @include respond(medium){
         width: 30%;
     }
-    @include respond(small){
+    @include respond(small) {
         width: 90%;
     }
 }
