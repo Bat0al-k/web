@@ -8,13 +8,15 @@
     <link rel="stylesheet" href="main.css">
     <title>Template by SASS</title>
 </head>
-
 <body>
     <!-- _______________ Header section ________________ -->
     <header class="navbar">
         <div class="logo">
             <img src="assest/logo-medical.png" alt="Porto Medical Logo">
         </div>
+        <button class="menu-toggle" aria-label="Toggle menu">
+            ☰
+        </button>
         <nav class="nav-menu">
             <a href="#" class="active">Home</a>
             <a href="#">About Us</a>
@@ -27,7 +29,7 @@
             <a href="#">Buy Porto!</a>
         </nav>
     </header>
-<!-- _______________ Hero section ________________ -->
+    <!-- _______________ Hero section ________________ -->
     <section class="hero">
         <div class="hero-content">
             <h1>SPECIALISTS</h1>
@@ -313,6 +315,14 @@
             </div>
         </div>
     </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const toggleBtn = document.querySelector(".menu-toggle");
+            const navMenu = document.querySelector(".nav-menu");
+            toggleBtn.addEventListener("click", function () {
+                navMenu.classList.toggle("active");
+            });
+        });
+    </script>
 </body>
-
 </html>
