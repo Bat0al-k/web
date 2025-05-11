@@ -1,10 +1,25 @@
 .logo img {
     height: 40px;
 }
+
+.menu-toggle {
+    display: none;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: $primary-blue;
+    cursor: pointer;
+
+    @include respond(medium) {
+        display: block;
+    }
+}
+
 .nav-menu {
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
+
     a {
         text-decoration: none;
         color: $primary-blue;
@@ -12,10 +27,54 @@
         padding: 0.5rem 1rem;
         border-radius: 5px;
         transition: background 0.3s;
+
         &.active,
         &:hover {
             background: $primary-blue;
             color: #fff;
+        }
+    }
+
+    // @include respond(small) {
+    //     flex-direction: column;
+    //     width: 100%;
+
+    //     a {
+    //         width: 100%;
+    //         padding: 1rem;
+    //         text-align: center;
+    //     }
+    // }
+
+    @include respond(medium) {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background: #fff;
+        padding: 1rem;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+        &.active {
+            display: flex;
+        }
+    }
+
+    @include respond(small) {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background: #fff;
+        padding: 1rem;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+        &.active {
+            display: flex;
         }
     }
 }
